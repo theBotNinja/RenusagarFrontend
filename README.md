@@ -1,12 +1,30 @@
-# React + Vite
+# 🌆 Renusagar Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web project dedicated to showcasing the town of **Renusagar**, Uttar Pradesh – an industrial township known for its power plant, educational institutions, and natural surroundings. This website aims to provide an informative, visually engaging, and user-friendly platform for locals, visitors, and researchers.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 About Renusagar
 
-## Expanding the ESLint configuration
+Renusagar is home to the Hindalco Industries' thermal power plant and is well-known for its clean environment, organized infrastructure, and facilities like schools, markets, parks, and hospitals. This website serves as a digital tour and information center for Renusagar.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧩 Features
+
+- 🏙️ Overview of Renusagar's geography and layout  
+- 🏭 Information on the power plant and industries  
+- 🏫 Details about schools and educational institutions  
+- 🏥 List of healthcare and public facilities  
+- 🌳 Tourist spots, gardens, and recreational areas  
+- 🚌 Transport and connectivity details  
+- 🧾 Civic amenities and public infrastructure  
+- 📸 Photo gallery of notable places  
+
+---
+
+## 🚀 Tech Stack
+
+- **Frontend**: React.js  
+- **Styling**: Tailwind CSS  
+- **Icons**: React Icons  
