@@ -1,0 +1,9 @@
+@import "tailwindcss";
+:root{
+    overflow-x: hidden;
+}
+.nav-btn:hover{
+    transition: all 0.2s;
+    color:#3B82F6;
+    scale: 1.05;
+}
