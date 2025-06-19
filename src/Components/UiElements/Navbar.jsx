@@ -12,9 +12,7 @@ export default function Navbar() {
       <div className="flex items-center justify-center text-xs md:text-lg  gap-3">
         <Link className="nav-btn" to="/">Home</Link>
         <Link className="nav-btn" to="/">Power & Industry</Link>
-        <Link   className="nav-btn"to="/">Community</Link>
         <Link className="nav-btn" to="/">Explore</Link>
-        <Link className="nav-btn" to="/">Education</Link>
         <Link className="nav-btn" to="/">About</Link>
       </div>
       <div className="flex items-center text-xs md:text-lg justify-center gap-3">

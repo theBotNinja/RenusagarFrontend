@@ -19,10 +19,10 @@ export default function HeroSection() {
         
         transition={{duration:0.7}}
         className="flex-1  space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className={`${isDark?"text-gray-300":"text-gray-700"} text-4xl md:text-6xl font-bold leading-tight`}>
             Welcome to <span className="almendra text-blue-500">Renusagar</span>
           </h1>
-          <p className="text-lg md:text-xl ">
+          <p className={`${isDark?"text-gray-300":"text-gray-600"} text-lg md:text-xl`} >
             is a small township in the southern part of Sonbhadra district,
             Uttar Pradesh, India . It was built around Hindalco’s Renusagar
             Power Plant – a coal-fired captive station set up by the Birla group

@@ -1,6 +1,7 @@
 @import "tailwindcss";
 :root{
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 .nav-btn:hover{
     transition: all 0.2s;

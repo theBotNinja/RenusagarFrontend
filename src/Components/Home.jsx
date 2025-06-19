@@ -5,6 +5,7 @@ import ImageStrip from './ImageStrip';
 import IndustrySection from './IndustrySection';
 import FacilitiesSection from './FacilitiesSection';
 import HeroSection from './HeroSection';
+import SchoolSection from "./SchoolSection"
 export default function Home() {
   return(
   <>
@@ -13,6 +14,7 @@ export default function Home() {
     <ImageStrip></ImageStrip>
     <IndustrySection></IndustrySection>
     <FacilitiesSection></FacilitiesSection>
+    <SchoolSection></SchoolSection>
     <Footer></Footer>
     </>
   )

@@ -19,7 +19,7 @@ const IndustrySection = () => {
             <MdFactory className="w-8 h-8 text-blue-600" />
             Economy & Industry
           </h2>
-          <p className=" text-lg">
+          <p className={`${isDark?"text-gray-300":"text-gray-600"} text-lg`}>
             Renusagar thrives on the power of industry – centered around Hindalco’s operations.
           </p>
         </div>
@@ -35,7 +35,7 @@ const IndustrySection = () => {
             <h3 className="text-2xl font-semibold ">
               Hindalco’s Renusagar Power Plant
             </h3>
-            <ul className="list-disc list-inside  space-y-2">
+            <ul className={`${isDark?"text-gray-300":"text-gray-600"} list-disc list-inside  space-y-2`}>
               <li>
                 ⚡ <strong>~887 MW</strong> coal-fired plant built in 1967.
               </li>
