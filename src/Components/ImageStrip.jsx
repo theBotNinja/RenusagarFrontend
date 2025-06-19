@@ -17,7 +17,7 @@ const ImageStrip = () => {
   const x = useTransform(scrollY, [0, 800], [0, -500]); // scroll effect
   const [isDark,changetheme] = useContext(Theme)
   return (
-    <div className={`w-[2000px] p-2  ${isDark?"bg-black": "bg-white"}`} >
+    <div className={`w-[1000px] md:w-[2000px] p-2  ${isDark?"bg-black": "bg-white"}`} >
       <motion.div
         className="flex space-x-4 px-6"
         style={{ x }}

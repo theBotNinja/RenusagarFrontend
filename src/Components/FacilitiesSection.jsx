@@ -6,37 +6,37 @@ import { IoMdWifi } from "react-icons/io";
 import { Theme } from "../Context/Theme";
 
 const facilities = [
-  {
+  {bgimage:"hover:bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('colony.jpeg')]",
     icon:<CiHome className="text-red-500 w-6 h-6" />,
     title: "Housing & Civic Amenities",
     description:
       "Planned residential colonies with proper roads, sanitation, and utilities, maintained by Hindalco’s civic authority.",
   },
-  {
+  {bgimage:"hover:bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('OIP.webp')]",
     icon: <CiShoppingCart className="text-yellow-500 w-6 h-6" />,
     title: "Shops & Commerce",
     description:
       "Local market meets daily needs. For larger purchases, residents visit Renukoot or Anpara.",
   },
-  {
+  {bgimage:"hover:bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('OIP.webp')]",
     icon: <CiHospital1 className="text-blue-500 w-6 h-6" />,
     title: "Healthcare",
     description:
       "Primary care available via local clinics. Major hospitals are located in Renukoot and Robertsganj.",
   },
-  {
+  {bgimage:"hover:bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('OIP.webp')]",
     icon: <IoMdWifi className="text-red-500 w-6 h-6" />,
     title: "Post & Telecom",
     description:
       "Sub-post office (PIN 231218), STD code 05446, and internet by BSNL, Jio, and others ensure connectivity.",
   },
-  {
+  {bgimage:"hover:bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('OIP.webp')]",
     icon: <FaBus className="text-yellow-500 w-6 h-6" />,
     title: "Transportation",
     description:
       "Renusagar is well connected by road and nearby rail access points in Renukoot and Anpara.",
   },
-  {
+  {bgimage:"hover:bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('park3.png')]",
     icon: <FaTree className="text-blue-500 w-6 h-6" />,
     title: "Recreation",
     description:
@@ -68,7 +68,7 @@ const FacilitiesSection = () => {
           {facilities.map((item, idx) => (
             <motion.div
               key={idx}
-              className={`${isDark?"bg-gray-900":"bg-gray-200"} p-6 rounded-xl shadow-md hover:shadow-lg transition`}
+              className={`${isDark?"bg-gray-900":"bg-gray-200"}  ${item.bgimage} bg-center hover:text-white bg-cover pt-25 pb-3 px-6 rounded-xl shadow-md hover:shadow-lg transition`}
               initial={{scale:1 }}
               
               transition={{ duration: 0.02}}
