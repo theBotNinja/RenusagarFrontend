@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer
       className={`${
-        isDark ? "bg-gray-950 text-gray-100" : "bg-gray-300 text-black"
+        isDark ? "bg-black text-gray-100" : "bg-gray-300 text-black"
       } py-10 px-6 md:px-20`}
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">

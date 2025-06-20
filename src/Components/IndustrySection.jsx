@@ -1,13 +1,16 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { MdFactory } from "react-icons/md";
 import { Theme } from "../Context/Theme";
 import LearnMoreBtn from "./UiElements/LearnMoreBtn";
 
 const IndustrySection = () => {
-  const [isDark,changetheme] = useContext(Theme)
+  const [isDark, changetheme] = useContext(Theme);
   return (
-    <section className= {`${isDark?"bg-black text-white": " bg-white text-black "} py-16 px-6 md:px-16`}>
+    <section
+      className={`${
+        isDark ? "bg-neutral-900 text-white" : " bg-white text-black "
+      } py-16 px-6 md:px-16`}
+    >
       <motion.div
         className="max-w-6xl mx-auto"
         initial={{ opacity: 0, y: 60 }}
@@ -16,11 +19,13 @@ const IndustrySection = () => {
       >
         <div className="mb-10 text-center">
           <h2 className="text-4xl font-bold mb-4 flex items-center justify-center gap-2">
-            <MdFactory className="w-8 h-8 text-blue-600" />
             Economy & Industry
           </h2>
-          <p className={`${isDark?"text-gray-300":"text-gray-600"} text-lg`}>
-            Renusagar thrives on the power of industry – centered around Hindalco’s operations.
+          <p
+            className={`${isDark ? "text-gray-300" : "text-gray-600"} text-lg`}
+          >
+            Renusagar thrives on the power of industry – centered around
+            Hindalco’s operations.
           </p>
         </div>
 
@@ -35,21 +40,25 @@ const IndustrySection = () => {
             <h3 className="text-2xl font-semibold ">
               Hindalco’s Renusagar Power Plant
             </h3>
-            <ul className={`${isDark?"text-gray-300":"text-gray-600"} list-disc list-inside  space-y-2`}>
+            <ul
+              className={`${
+                isDark ? "text-gray-300" : "text-gray-600"
+              } list-disc list-inside  space-y-2`}
+            >
               <li>
-                ⚡ <strong>~887 MW</strong> coal-fired plant built in 1967.
+                <strong>~887 MW</strong> coal-fired plant built in 1967.
               </li>
               <li>
-                🔗 Supplies electricity to <strong>Renukoot Aluminium Smelter</strong> (35 km away).
+                Supplies electricity to{" "}
+                <strong>Renukoot Aluminium Smelter</strong> (35 km away).
               </li>
+              <li>Backbone of local employment & economy.</li>
               <li>
-                🏭 Backbone of local employment & economy.
-              </li>
-              <li>
-                ⛏️ Extensive coal mining in the nearby Singrauli-Sonbhadra region.
+                Extensive coal mining in the nearby Singrauli-Sonbhadra
+                region.
               </li>
             </ul>
-            <LearnMoreBtn text = "Visit Industry"></LearnMoreBtn>
+            <LearnMoreBtn text="Visit Industry"></LearnMoreBtn>
           </motion.div>
 
           {/* Image Block */}

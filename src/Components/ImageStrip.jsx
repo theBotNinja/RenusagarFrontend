@@ -15,16 +15,17 @@ const images = [
 const ImageStrip = () => {
   const { scrollY } = useScroll();
   const x = useTransform(scrollY, [0, 1000], [0, -800]); // scroll effect
-  const [isDark,changetheme] = useContext(Theme)
+  const [isDark, changetheme] = useContext(Theme);
   return (
-    <div className={`w-[1000] md:block hidden p-2 SaveMeClass ${isDark?"bg-black": "bg-white"}`} >
-      <motion.div
-        className="flex space-x-4 px-6"
-        style={{ x }}
-      >
+    <div
+      className={`w-[1000] md:block hidden p-2 SaveMeClass ${
+        isDark ? "bg-neutral-900" : "bg-white"
+      }`}
+    >
+      <motion.div className="flex space-x-4 px-6" style={{ x }}>
         {images.map((src, i) => (
-          <motion.img 
-            key={i} 
+          <motion.img
+            key={i}
             src={src}
             alt="theBotNinja"
             className="w-[300px] h-[150px] object-cover rounded-lg shadow-md"

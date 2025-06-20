@@ -17,20 +17,21 @@ export default function Card(props) {
           : `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.3), rgba(0,0,0,0.5), rgba(0,0,0,1)), url(${props.image})`,
       }}
       className={`text-white bg-center magicbg bg-cover hover:border-gray-300 pt-25 pb-3 px-6 rounded-xl shadow-md hover:shadow-lg `}
-      initial={{ scale: 1,y:50}}
-      transition={{ type: "spring", duration: 0.3}}
+      initial={{ scale: 1, y: 50 }}
+      transition={{ type: "spring", duration: 0.3 }}
       whileHover={{ scale: 1.05 }}
-      whileInView={{y:0}}
+      whileInView={{ y: 0 }}
     >
       <div className={`mb-4 ${isHover ? "opacity-50" : ""} `}>{props.icon}</div>
       <motion.h4
         className="text-xl font-semibold  mb-2"
-        animate={{opacity:isHover?0:1,y:isHover?40:0}}
+        animate={{ opacity: isHover ? 0 : 1, y: isHover ? 40 : 0 }}
       >
         {props.title}
       </motion.h4>
-      <motion.p className={`${isHover ? "opacity-0" : ""} text-gray-300 `}
-       animate={{opacity:isHover?0:1,y:isHover?40:0}}
+      <motion.p
+        className={`${isHover ? "opacity-0" : ""} text-gray-300 `}
+        animate={{ opacity: isHover ? 0 : 1, y: isHover ? 40 : 0 }}
       >
         {props.description}
       </motion.p>
