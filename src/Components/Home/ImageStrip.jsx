@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Theme } from "../Context/Theme";
+import { Theme } from "../../Context/Theme";
 
 const images = [
   "colony.jpeg",
@@ -19,7 +19,7 @@ const ImageStrip = () => {
   return (
     <div
       className={`w-[1000] md:block hidden p-2 SaveMeClass ${
-        isDark ? "bg-neutral-900" : "bg-white"
+        isDark ? "bg-neutral-900" : "bg-neutral-100"
       }`}
     >
       <motion.div className="flex space-x-4 px-6" style={{ x }}>

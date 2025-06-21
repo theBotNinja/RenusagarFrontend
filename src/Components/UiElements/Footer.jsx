@@ -2,6 +2,7 @@ import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Theme } from "../../Context/Theme";
 import { useContext } from "react";
+import { Link } from "react-router";
 
 export default function Footer() {
   const [isDark, changetheme] = useContext(Theme);
@@ -23,29 +24,29 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#" className="hover:text-blue-500">
+              <Link to="/" className="hover:text-blue-500">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500">
+              <Link to="/about" className="hover:text-blue-500">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500">
+              <Link to="/powerplant" className="hover:text-blue-500">
                 Power & Industry
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500">
+              <Link to="/explore" className="hover:text-blue-500">
                 Explore
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500">
+              <Link to="/#EducationSectionId" className="hover:text-blue-500">
                 Education
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#" className="hover:text-blue-500">

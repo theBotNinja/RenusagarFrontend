@@ -15,13 +15,13 @@ export default function Navbar() {
         <Link className="nav-btn" to="/">
           Home
         </Link>
-        <Link className="nav-btn" to="/">
+        <Link className="nav-btn" to="/PowerPlant">
           Power & Industry
         </Link>
-        <Link className="nav-btn" to="/">
+        <Link className="nav-btn" to="/explore">
           Explore
         </Link>
-        <Link className="nav-btn" to="/">
+        <Link className="nav-btn" to="/about">
           About
         </Link>
       </div>
@@ -39,7 +39,7 @@ export default function Navbar() {
             <MdOutlineDarkMode size={25} color="black"></MdOutlineDarkMode>
           )}
         </button>
-        <Link to="/">LogIn-{">"}</Link>
+        <Link to="/404" className={`font-[Sacramento] text-2xl ${isDark?"bg-yellow-800": "bg-yellow-500"} p-1 rounded-lg `}>login</Link>
       </div>
     </nav>
   );

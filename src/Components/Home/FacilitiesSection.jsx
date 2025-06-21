@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { CiHome, CiHospital1, CiShoppingCart } from "react-icons/ci";
 import { FaBus, FaTree } from "react-icons/fa";
 import { IoMdWifi } from "react-icons/io";
-import { Theme } from "../Context/Theme";
-import Card from "./UiElements/Card";
+import { Theme } from "../../Context/Theme";
+import Card from "../UiElements/Card";
 
 const facilities = [
   {
@@ -15,28 +15,28 @@ const facilities = [
       "Planned residential colonies with proper roads, sanitation, and utilities, maintained by Hindalco’s civic authority.",
   },
   {
-    bgimage: "OIP.webp",
+    bgimage: "market.png",
     icon: <CiShoppingCart className="text-yellow-500 w-6 h-6" />,
     title: "Shops & Commerce",
     description:
       "Local market meets daily needs. For larger purchases, residents visit Renukoot or Anpara.",
   },
   {
-    bgimage: "OIP.webp",
+    bgimage: "hospital.png",
     icon: <CiHospital1 className="text-blue-500 w-6 h-6" />,
     title: "Healthcare",
     description:
       "Primary care available via local clinics. Major hospitals are located in Renukoot and Robertsganj.",
   },
   {
-    bgimage: "OIP.webp",
+    bgimage: "cell-phone-tower.jpg",
     icon: <IoMdWifi className="text-red-500 w-6 h-6" />,
     title: "Post & Telecom",
     description:
       "Sub-post office (PIN 231218), STD code 05446, and internet by BSNL, Jio, and others ensure connectivity.",
   },
   {
-    bgimage: "OIP.webp",
+    bgimage: "bus.jpg",
     icon: <FaBus className="text-yellow-500 w-6 h-6" />,
     title: "Transportation",
     description:
@@ -56,7 +56,7 @@ const FacilitiesSection = () => {
   return (
     <section
       className={`${
-        isDark ? "bg-neutral-900 text-white " : "bg-white text-black "
+        isDark ? "bg-neutral-900 text-white " : "bg-neutral-100 text-black "
       } py-16 px-6 md:px-20`}
     >
       <motion.div

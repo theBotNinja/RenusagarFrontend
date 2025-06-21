@@ -1,14 +1,14 @@
 import { React, useContext } from "react";
-import { Theme } from "../Context/Theme";
+import { Theme } from "../../Context/Theme";
 import { motion } from "framer-motion";
-import LearnMoreBtn from "./UiElements/LearnMoreBtn";
+import LearnMoreBtn from "../UiElements/LearnMoreBtn";
 
-export default function HeroSection() {
+export default function HeroSection({title,highlight,desc,btnText,btnLink,imageLink}) {
   const [isDark, changetheme] = useContext(Theme);
   return (
     <section
       className={`${
-        isDark ? "bg-neutral-900 text-white" : "bg-white text-gray-800"
+        isDark ? "bg-neutral-900 text-white" : "bg-neutral-100 text-gray-800"
       } flex items-center justify-center p-20  md:px-20`}
     >
       <div className="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-10">
@@ -24,19 +24,15 @@ export default function HeroSection() {
               isDark ? "text-gray-300" : "text-gray-700"
             } text-4xl md:text-6xl font-bold leading-tight`}
           >
-            Welcome to <span className="almendra text-blue-500">Renusagar</span>
+            {title} <span className="almendra text-blue-500">{highlight}</span>
           </h1>
           <p
             className={`${
               isDark ? "text-gray-300" : "text-gray-600"
             } text-lg md:text-xl`}
-          >
-            is a small township in the southern part of Sonbhadra district,
-            Uttar Pradesh, India . It was built around Hindalco’s Renusagar
-            Power Plant – a coal-fired captive station set up by the Birla group
-            in 1967.
+          >{desc}
           </p>
-          <LearnMoreBtn text="Learn more"></LearnMoreBtn>
+          <LearnMoreBtn text={btnText} link={btnLink}></LearnMoreBtn>
         </motion.div>
 
         {/* Image */}
@@ -47,9 +43,9 @@ export default function HeroSection() {
           className="flex-1 flex items-center justify-center"
         >
           <img
-            src="hindalco_logo.png"
+            src={imageLink}
             alt="image not found"
-            className="w-75 h-auto rounded-xl shadow-md"
+            className="w-75 h-auto mybg-new rounded-xl shadow-md"
           />
         </motion.div>
       </div>

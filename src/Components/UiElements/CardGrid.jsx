@@ -7,7 +7,7 @@ export default function CardGrid({ items, isDark }) {
   return (
     <div
       className={`${
-        isDark ? " bg-neutral-900 text-white" : " bg-white text-black"
+        isDark ? " bg-neutral-900 text-white" : " bg-neutral-100 text-black"
       } grid md:grid-cols-3 gap-8`}
     >
       {items.map((item, i) => (
@@ -20,7 +20,6 @@ export default function CardGrid({ items, isDark }) {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: i * 0.1, type: "spring" }}
         >
-          {" "}
           <div className="mb-4 mt-4">{item.icon}</div>
           <h4
             className={`text-xl font-semibold ${
@@ -32,9 +31,9 @@ export default function CardGrid({ items, isDark }) {
           <p className={isDark ? "text-gray-400" : "text-gray-600"}>
             {item.description}
           </p>
-          <Link to={items.link}>
-            <FollowLinkbtn text="check out"></FollowLinkbtn>
-          </Link>
+          
+          <FollowLinkbtn link={item.link} text="check out"></FollowLinkbtn>
+          
         </motion.div>
       ))}
     </div>

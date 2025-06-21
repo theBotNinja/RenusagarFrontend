@@ -3,32 +3,32 @@ import { motion } from "framer-motion";
 import { PiStudentBold } from "react-icons/pi";
 import { FaSchool } from "react-icons/fa";
 import { IoSchoolSharp } from "react-icons/io5";
-import { Theme } from "../Context/Theme";
+import { Theme } from "../../Context/Theme";
 
 const schools = [
   {
     name: "Aditya Birla Junior School",
     description: "Hindi-medium primary school (Grades 1–5).",
-    icon: <FaSchool className="text-red-500 text-3xl" />,
+    icon: <FaSchool className="text-red-500 text-3xl" />,link:"https://adityabirlaschools.co.in/abjs-renusagar/"
   },
   {
     name: "Aditya Birla Intermediate College",
     description: "Hindi-medium higher secondary (Grades 6–12).",
-    icon: <IoSchoolSharp className="text-yellow-500 text-3xl" />,
+    icon: <IoSchoolSharp className="text-yellow-500 text-3xl" />,link:"https://adityabirlaschools.co.in/abic-renusagar/"
   },
   {
     name: "Aditya Birla Public School",
     description: "English-medium CBSE school (LKG – Grade 12).",
-    icon: <PiStudentBold className="text-blue-500 text-3xl" />,
+    icon: <PiStudentBold className="text-blue-500 text-3xl" />,link:"https://adityabirlaschools.co.in/abps-renusagar/"
   },
 ];
 
-const EducationSection = () => {
+const SchoolSection = () => {
   const [isDark, changetheme] = useContext(Theme);
   return (
-    <section
+    <section id="EducationSectionId"
       className={`${
-        isDark ? " bg-neutral-900 text-white" : " text-black bg-white "
+        isDark ? " bg-neutral-900 text-white" : " text-black bg-neutral-100 "
       } py-16 px-6 md:px-20  text-gray-800`}
     >
       <motion.div
@@ -52,16 +52,17 @@ const EducationSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {schools.map((school, index) => (
-            <motion.div
+            <motion.div onClick={()=>{open(school.link)}}
               key={index}
               className={`${
                 isDark
-                  ? "bg-black shadow-neutral-700 hover:border-neutral-300 "
-                  : "hover:border-neutral-700  bg-gray-300 shadow-gray-200"
-              } border-2 border-transparent hover:border-amber-50 rounded-xl shadow-2xl p-6 hover:shadow-transparent flex items-start justify-between flex-col transition-shadow duration-300`}
+                  ? "bg-black shadow-neutral-700 hover:bg-gray-950 hover:border-neutral-300 "
+                  : "hover:border-neutral-700  bg-gray-300 hover:bg-gray-200 shadow-gray-200"
+              } border-2 hover:cursor-pointer border-transparent hover:border-amber-50 rounded-xl shadow-2xl p-6 hover:shadow-transparent flex items-start justify-between flex-col transition-shadow duration-300`}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.2, duration: 0.3, type: "spring" }}
+              whileHover={{scale:1.05}}
+              transition={{delay: .1, duration: 0.3, type: "spring" }}
             >
               <div className="mb-4">{school.icon}</div>
               <h4 className="text-xl font-semibold mb-2 ">{school.name}</h4>
@@ -90,4 +91,4 @@ const EducationSection = () => {
   );
 };
 
-export default EducationSection;
+export default SchoolSection;

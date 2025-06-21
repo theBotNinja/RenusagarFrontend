@@ -3,11 +3,11 @@ import { useContext } from "react";
 import styled from "styled-components";
 import { Theme } from "../../Context/Theme";
 
-const FollowLinkbtn = ({ text }) => {
+const FollowLinkbtn = ({link, text }) => {
   const [isDark, changetheme] = useContext(Theme);
   return (
     <StyledWrapper>
-      <button className="cta">
+      <button className="cta" onClick={()=>{open(link)}}>
         <span
           className={`${
             isDark ? "text-blue-400" : "text-blue-800"

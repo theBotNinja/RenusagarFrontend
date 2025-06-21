@@ -14,9 +14,9 @@ export default function Card(props) {
       style={{
         backgroundImage: isHover
           ? `url(${props.image})`
-          : `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.3), rgba(0,0,0,0.5), rgba(0,0,0,1)), url(${props.image})`,
+          : `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.5), rgba(0,0,0,0.8), rgba(0,0,0,1)), url(${props.image})`,
       }}
-      className={`text-white bg-center magicbg bg-cover hover:border-gray-300 pt-25 pb-3 px-6 rounded-xl shadow-md hover:shadow-lg `}
+      className={`text-white bg-center magicbg bg-cover hover:border-gray-300 hover:cursor-pointer pt-25 pb-3 px-6 rounded-xl shadow-md hover:shadow-lg `}
       initial={{ scale: 1, y: 50 }}
       transition={{ type: "spring", duration: 0.3 }}
       whileHover={{ scale: 1.05 }}

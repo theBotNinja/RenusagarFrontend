@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { Theme } from "../../Context/Theme";
+import { Link } from "react-router";
 
 const StyledWrapper = styled.div`
   button {
@@ -94,6 +95,7 @@ const LearnMoreBtn = (props) => {
   const [isDark, changetheme] = useContext(Theme);
   return (
     <StyledWrapper>
+      <Link to="/">
       <button className="learn-more">
         <span className="circle" aria-hidden="true">
           <span className="icon arrow" />
@@ -102,6 +104,7 @@ const LearnMoreBtn = (props) => {
           {props.text}
         </span>
       </button>
+      </Link>
     </StyledWrapper>
   );
 };

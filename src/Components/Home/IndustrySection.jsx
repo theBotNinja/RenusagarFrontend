@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { Theme } from "../Context/Theme";
-import LearnMoreBtn from "./UiElements/LearnMoreBtn";
+import { Theme } from "../../Context/Theme";
+import LearnMoreBtn from "../UiElements/LearnMoreBtn";
 
 const IndustrySection = () => {
   const [isDark, changetheme] = useContext(Theme);
   return (
     <section
       className={`${
-        isDark ? "bg-neutral-900 text-white" : " bg-white text-black "
+        isDark ? "bg-neutral-900 text-white" : " bg-neutral-100 text-black "
       } py-16 px-6 md:px-16`}
     >
       <motion.div
