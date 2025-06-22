@@ -22,8 +22,8 @@ export default function Home() {
             Power Plant – a coal-fired captive station set up by the Birla group
             in 1967.`}
           btnText={"Learn more"}
-          btnLink={"/"}
-          imageLink={"hindalco_logo.png"}
+          btnLink={"/about#AboutId"}
+          imageLink={"road.jpg"}
         ></HeroSection>
         <ImageStrip></ImageStrip>
         <IndustrySection></IndustrySection>

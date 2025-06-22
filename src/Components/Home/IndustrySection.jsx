@@ -58,7 +58,7 @@ const IndustrySection = () => {
                 region.
               </li>
             </ul>
-            <LearnMoreBtn text="Visit Industry"></LearnMoreBtn>
+            <LearnMoreBtn text="Visit Industry" link="/PowerPlant#PowerPlant"></LearnMoreBtn>
           </motion.div>
 
           {/* Image Block */}

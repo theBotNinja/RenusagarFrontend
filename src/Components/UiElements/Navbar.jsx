@@ -11,7 +11,7 @@ export default function Navbar() {
       } sticky top-0 z-10 opacity-95 flex items-center justify-between p-1 md:p-4`}
     >
       <div className={`almendra font-extrabold  md:text-3xl `}>Renusagar</div>
-      <div className="flex items-center justify-center text-xs md:text-lg  gap-3">
+      <div className="flex items-center font-medium justify-center text-xs md:text-lg  gap-3">
         <Link className="nav-btn" to="/">
           Home
         </Link>

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { Theme } from "../../Context/Theme";
-import { Link } from "react-router";
+import { HashLink } from "react-router-hash-link";
 
 const StyledWrapper = styled.div`
   button {
@@ -95,7 +95,7 @@ const LearnMoreBtn = (props) => {
   const [isDark, changetheme] = useContext(Theme);
   return (
     <StyledWrapper>
-      <Link to="/">
+      <HashLink to={props.link}>
       <button className="learn-more">
         <span className="circle" aria-hidden="true">
           <span className="icon arrow" />
@@ -104,7 +104,7 @@ const LearnMoreBtn = (props) => {
           {props.text}
         </span>
       </button>
-      </Link>
+      </HashLink>
     </StyledWrapper>
   );
 };

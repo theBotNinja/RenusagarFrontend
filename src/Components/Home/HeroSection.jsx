@@ -6,7 +6,7 @@ import LearnMoreBtn from "../UiElements/LearnMoreBtn";
 export default function HeroSection({title,highlight,desc,btnText,btnLink,imageLink}) {
   const [isDark, changetheme] = useContext(Theme);
   return (
-    <section
+    <section 
       className={`${
         isDark ? "bg-neutral-900 text-white" : "bg-neutral-100 text-gray-800"
       } flex items-center justify-center p-20  md:px-20`}

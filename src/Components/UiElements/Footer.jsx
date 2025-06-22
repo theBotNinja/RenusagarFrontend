@@ -3,6 +3,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Theme } from "../../Context/Theme";
 import { useContext } from "react";
 import { Link } from "react-router";
+import { HashLink } from "react-router-hash-link";
 
 export default function Footer() {
   const [isDark, changetheme] = useContext(Theme);
@@ -44,9 +45,9 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/#EducationSectionId" className="hover:text-blue-500">
+              <HashLink to="/#EducationSectionId" className="hover:text-blue-500">
                 Education
-              </Link>
+              </HashLink>
             </li>
             <li>
               <a href="#" className="hover:text-blue-500">

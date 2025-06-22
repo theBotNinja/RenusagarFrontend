@@ -10,7 +10,7 @@ const facilities = [
   {
     bgimage: "colony.jpeg",
     icon: <CiHome className="text-red-500 w-6 h-6" />,
-    title: "Housing & Civic Amenities",
+    title: "Renusagar Colony",
     description:
       "Planned residential colonies with proper roads, sanitation, and utilities, maintained by Hindalco’s civic authority.",
   },

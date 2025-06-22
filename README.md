@@ -12,19 +12,42 @@ Renusagar is home to the Hindalco Industries' thermal power plant and is well-kn
 
 ## 🧩 Features
 
-- 🏙️ Overview of Renusagar's geography and layout  
-- 🏭 Information on the power plant and industries  
-- 🏫 Details about schools and educational institutions  
-- 🏥 List of healthcare and public facilities  
-- 🌳 Tourist spots, gardens, and recreational areas  
-- 🚌 Transport and connectivity details  
-- 🧾 Civic amenities and public infrastructure  
-- 📸 Photo gallery of notable places  
+- 🏙️ Overview of Renusagar's geography and layout
+- 🏭 Information on the power plant and industries
+- 🏫 Details about schools and educational institutions
+- 🏥 List of healthcare and public facilities
+- 🌳 Tourist spots, gardens, and recreational areas
+- 🚌 Transport and connectivity details
+- 🧾 Civic amenities and public infrastructure
+- 📸 Photo gallery of notable places
 
 ---
 
 ## 🚀 Tech Stack
 
-- **Frontend**: React.js  
-- **Styling**: Tailwind CSS  
-- **Icons**: React Icons  
+- **Frontend**: React.js
+- **Styling**: Tailwind CSS
+- **Icons**: React Icons
+
+---
+
+## Run Project
+
+### Install Pkgs
+
+```bash
+npm i
+```
+
+### For Development
+
+```bash
+npm run dev
+```
+
+### For Production
+
+```bash
+npm run build
+cd ./dist
+```

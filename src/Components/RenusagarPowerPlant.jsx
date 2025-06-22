@@ -9,6 +9,7 @@ export default function RenusagarPowerPlant() {
   return (
     <>
       <Navbar></Navbar>
+      <div id="PowerPlant"></div>
       <HeroSection
         title={"Power plant"}
         highlight={"Renusagar"}
@@ -19,7 +20,7 @@ export default function RenusagarPowerPlant() {
         }
         btnText={"Learn More"}
         btnLink={"/"}
-        imageLink={"road.jpg"}
+        imageLink={"hindalco_logo.png"}
       ></HeroSection>
       <DepartmentSection />
       <Certification></Certification>
