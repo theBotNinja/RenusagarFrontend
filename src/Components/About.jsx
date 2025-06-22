@@ -122,7 +122,7 @@ export default function About() {
             >
               Devansh Joshi
             </a>
-            , during my vacation period. It reflects my passion for web
+            , during my Intership period at Hindalco Renusagar. It reflects my passion for web
             development and showcasing meaningful local places through
             technology.
           </p>
