@@ -108,7 +108,7 @@ export default function About() {
           <p className="">
             This website was{" "}
             <strong>
-              conceptualized, designed, and front-end developed by me,
+              designed, and front-end developed by me,
             </strong>{" "}
             <a
               href="https://www.linkedin.com/in/devansh-joshi-12a036234/"

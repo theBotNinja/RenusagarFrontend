@@ -18,7 +18,7 @@ export default function RenusagarPowerPlant() {
           , Renukoot for production of aluminium.
            It has an installed capacity of ~801.57 MW and it has 10 generating units of various capacities.`
         }
-        bgimage={"mainplant3.jpeg"}
+        bgimage={"1.png"}
         btnText={"Learn More"}
         btnLink={"/"}
         imageLink={"hindalco_logo.png"}

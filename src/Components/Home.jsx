@@ -22,7 +22,7 @@ export default function Home({touristAttractions}) {
             Power Plant – a coal-fired captive station set up by the Birla group
             in 1967.`}
           btnText={"Learn more"}
-          bgimage={isDark?"anparaview.jpg":"anparaview2.jpg"}
+          bgimage={isDark?"5.png":"2.jpg"}
           btnLink={"/about#AboutId"}
           imageLink={"plant.jpeg"}
         ></HeroSection>

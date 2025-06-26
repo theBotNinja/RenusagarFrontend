@@ -7,8 +7,8 @@ export default function HeroSection({title,highlight,desc,btnText,btnLink,imageL
   const [isDark, changetheme] = useContext(Theme);
   return (
     <section 
-    style={{backgroundImage: isDark?`linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), 
-              url(${bgimage})`:`linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), 
+    style={{backgroundImage: isDark?`linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), 
+              url(${bgimage})`:`linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, 1)), 
               url(${bgimage})`}}
       className={`${
         isDark ? "bg-neutral-900 text-white" : "bg-neutral-100 text-gray-800"
@@ -31,7 +31,7 @@ export default function HeroSection({title,highlight,desc,btnText,btnLink,imageL
           </h1>
           <p
             className={`${
-              isDark ? "text-gray-300" : "text-gray-600"
+              isDark ? "text-gray-300" : "text-gray-950"
             } text-lg md:text-xl`}
           >{desc}
           </p>
