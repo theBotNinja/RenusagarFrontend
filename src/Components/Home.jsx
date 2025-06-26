@@ -8,7 +8,7 @@ import ImageStrip from "./Home/ImageStrip";
 import IndustrySection from "./Home/IndustrySection";
 import SchoolSection from "./Home/SchoolSection";
 import Tourism from "./Home/Tourism";
-export default function Home() {
+export default function Home({touristAttractions}) {
   const [isDark, changetheme] = useContext(Theme);
   return (
     <>
@@ -22,14 +22,16 @@ export default function Home() {
             Power Plant – a coal-fired captive station set up by the Birla group
             in 1967.`}
           btnText={"Learn more"}
+          bgimage={isDark?"anparaview.jpg":"anparaview2.jpg"}
           btnLink={"/about#AboutId"}
-          imageLink={"road.jpg"}
+          imageLink={"plant.jpeg"}
         ></HeroSection>
         <ImageStrip></ImageStrip>
         <IndustrySection></IndustrySection>
         <FacilitiesSection></FacilitiesSection>
         <SchoolSection></SchoolSection>
-        <Tourism></Tourism>
+        <Tourism touristAttractions={touristAttractions}></Tourism>
+        <p className={`${isDark?"text-neutral-600":"text-neutral-400"} text-center p-4 `}>~ more section coming soon ~</p>
         <Footer></Footer>
       </div>
     </>

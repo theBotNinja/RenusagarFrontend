@@ -10,7 +10,7 @@ export default function CardGrid({ items, isDark }) {
         isDark ? " bg-neutral-900 text-white" : " bg-neutral-100 text-black"
       } grid md:grid-cols-3 gap-8`}
     >
-      {items.map((item, i) => (
+      {items.slice(0,6).map((item, i) => (
         <motion.div
           key={i}
           className={`${
