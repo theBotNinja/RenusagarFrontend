@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { Theme } from "../../Context/Theme";
 import LearnMoreBtn from "../UiElements/LearnMoreBtn";
+import CaptionImages from "../UiElements/CaptionImages";
 
 const IndustrySection = () => {
   const [isDark, changetheme] = useContext(Theme);
@@ -68,11 +69,8 @@ const IndustrySection = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <img
-              src="mainplant.jpeg"
-              alt="Renusagar Power Plant"
-              className="object-cover w-full h-full"
-            />
+            <CaptionImages  image={"mainplant.jpeg"} text={"Renusagar Power Plant" } ></CaptionImages>
+            
           </motion.div>
         </div>
       </motion.div>

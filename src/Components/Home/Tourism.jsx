@@ -19,7 +19,7 @@ export default function Tourism({touristAttractions}) {
         transition={{ duration: 0.8 }}
       >
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Explore Renusagar</h2>
+          <h2 className="text-4xl font-bold mb-4">Explore Near by places</h2>
           <p
             className={`text-lg max-w-2xl mx-auto ${
               isDark ? "text-gray-400" : "text-gray-600"

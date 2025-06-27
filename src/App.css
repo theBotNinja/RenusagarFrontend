@@ -8,3 +8,8 @@
     color:#3B82F6;
     scale: 1.05;
 }
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}

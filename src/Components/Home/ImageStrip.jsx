@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Theme } from "../../Context/Theme";
+import CaptionImages from "../UiElements/CaptionImages";
 
 const images = [
-  "colony.jpeg",
-  "anparaview.jpg",
-  "thermalpower.webp",
-  "abic.jpeg",
-  "homesection.jpg",
-  "plant.jpg",
-  "view.jpg",
+  {image:"colony.jpeg",text : "Colony"},
+  {image:"anparaview.jpg",text : "View from Renusagar"},
+  {image:"thermalpower.webp",text : "Renusagar plant"},
+  {image:"abic.jpeg",text : "ABIC Ground"},
+  {image:"homesection.jpg",text : "Shiv Mandir"},
+  {image:"plant.jpg",text : "Power plant view"},
+  {image:"view.jpg",text : "Road to Madhuban park"},
 ];
 
 const ImageStrip = () => {
@@ -23,13 +24,13 @@ const ImageStrip = () => {
       }`}
     >
       <motion.div className="flex space-x-4 px-6" style={{ x }}>
-        {images.map((src, i) => (
-          <motion.img
+        {images.map((item, i) => (
+          <motion.div
             key={i}
-            src={src}
-            alt="theBotNinja"
-            className="w-[300px] h-[150px] object-cover rounded-lg shadow-md"
-          />
+            className=" object-cover rounded-lg shadow-md"
+          >
+            <CaptionImages image={item.image} text = {item.text} height={"150px"} width={"300px"}></CaptionImages>
+          </motion.div>
         ))}
       </motion.div>
     </div>

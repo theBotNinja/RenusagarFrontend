@@ -9,17 +9,17 @@ const schools = [
   {
     name: "Aditya Birla Junior School",
     description: "Hindi-medium primary school (Grades 1–5).",
-    icon: <FaSchool className="text-red-500 text-3xl" />,link:"https://adityabirlaschools.co.in/abjs-renusagar/"
+    icon: "school.png",link:"https://adityabirlaschools.co.in/abjs-renusagar/"
   },
   {
     name: "Aditya Birla Intermediate College",
     description: "Hindi-medium higher secondary (Grades 6–12).",
-    icon: <IoSchoolSharp className="text-yellow-500 text-3xl" />,link:"https://adityabirlaschools.co.in/abic-renusagar/"
+    icon: "ABIC-RENUSAGAR-PHOTOGRAPH.jpg",link:"https://adityabirlaschools.co.in/abic-renusagar/"
   },
   {
     name: "Aditya Birla Public School",
     description: "English-medium CBSE school (LKG – Grade 12).",
-    icon: <PiStudentBold className="text-blue-500 text-3xl" />,link:"https://adityabirlaschools.co.in/abps-renusagar/"
+    icon: "abps.jpg",link:"https://adityabirlaschools.co.in/abps-renusagar/"
   },
 ];
 
@@ -56,15 +56,18 @@ const SchoolSection = () => {
               key={index}
               className={`${
                 isDark
-                  ? "bg-black shadow-neutral-700 hover:bg-gray-950 hover:border-neutral-300 "
+                  ? "bg-black shadow-neutral-700  hover:border-neutral-300 "
                   : "hover:border-neutral-700  bg-gray-300 hover:bg-gray-200 shadow-gray-200"
-              } border-2 hover:cursor-pointer border-transparent hover:border-amber-50 rounded-xl shadow-2xl p-6 hover:shadow-transparent flex items-start justify-between flex-col transition-shadow duration-300`}
+              } border-2 hover:cursor-pointer border-transparent hover:border-amber-50 rounded-xl shadow-2xl p-6 hover:shadow-transparent flex items-center justify-between flex-col transition-shadow duration-300`}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               whileHover={{scale:1.05}}
               transition={{delay: .1, duration: 0.3, type: "spring" }}
             >
-              <div className="mb-4">{school.icon}</div>
+              <div className="mb-4 rounded-lg bg-cover bg-center bg-no-repeat w-70 h-35 " style={{backgroundImage:
+                isDark?`linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.1), rgba(0,0,0,0.5), rgba(0,0,0,1)),
+                url(${school.icon})`:`
+                url(${school.icon})`}}></div>
               <h4 className="text-xl font-semibold mb-2 ">{school.name}</h4>
               <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
                 {school.description}
