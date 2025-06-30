@@ -8,42 +8,42 @@ import Card from "../UiElements/Card";
 
 const facilities = [
   {
-    bgimage: "colony.jpeg",
+    bgimage: "colony.jpeg",link:'',
     icon: <CiHome className="text-red-500 w-6 h-6" />,
     title: "Renusagar Colony",
     description:
       "Planned residential colonies with proper roads, sanitation, and utilities, maintained by Hindalco’s civic authority.",
   },
   {
-    bgimage: "market.png",
+    bgimage: "market.png",link:"",
     icon: <CiShoppingCart className="text-yellow-500 w-6 h-6" />,
     title: "Shops & Commerce",
     description:
       "Local market meets daily needs. For larger purchases, residents visit Renukoot or Anpara.",
   },
   {
-    bgimage: "hospital.png",
+    bgimage: "hospital.png",link:"",
     icon: <CiHospital1 className="text-blue-500 w-6 h-6" />,
     title: "Healthcare",
     description:
       "Primary care available via local clinics. Major hospitals are located in Renukoot and Robertsganj.",
   },
   {
-    bgimage: "cell-phone-tower.jpg",
+    bgimage: "cell-phone-tower.jpg",link:"",
     icon: <IoMdWifi className="text-red-500 w-6 h-6" />,
     title: "Post & Telecom",
     description:
       "Sub-post office (PIN 231218), STD code 05446, and internet by BSNL, Jio, and others ensure connectivity.",
   },
   {
-    bgimage: "bus.jpg",
+    bgimage: "bus.jpg",link:"",
     icon: <FaBus className="text-yellow-500 w-6 h-6" />,
     title: "Transportation",
     description:
       "Renusagar is well connected by road and nearby rail access points in Renukoot and Anpara.",
   },
   {
-    bgimage: "park3.png",
+    bgimage: "park3.png",link:"/#TransportSection",
     icon: <FaTree className="text-blue-500 w-6 h-6" />,
     title: "Recreation",
     description:
@@ -85,6 +85,7 @@ const FacilitiesSection = () => {
               title={item.title}
               description={item.description}
               icon={item.icon}
+              link={item.link}
             ></Card>
           ))}
         </div>

@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router";
 import Home from "./Components/Home";
 import { Theme } from "./Context/Theme";
 import RenusagarPowerPlant from "./Components/RenusagarPowerPlant";
 import Explore from "./Components/Explore";
-import { FaMonument, FaHiking } from "react-icons/fa";
+import { FaHiking } from "react-icons/fa";
 import { MdTempleHindu, MdSportsSoccer, MdPark } from "react-icons/md";
 import About from "./Components/About";
 import PageNotFound from "./Components/PageNotFound";
 import Department from "./Components/PowerPlant/Department";
+import { useLocation } from "react-router";
 
 function App() {
   const [isDark, setDark] = useState(() => {
@@ -19,8 +20,10 @@ function App() {
     }
     return false;
   });
-  const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-  console.log(darkThemeMq);
+  const {pathname} = useLocation()
+   useEffect(()=>{
+    window.scrollTo(0,0)
+   },[pathname])
   const [touristAttractions, changetouristAttractions] = useState(Attractions);
   const changetheme = () => {
     if (isDark == false) {
@@ -59,7 +62,8 @@ const Attractions = [
   },
   {
     name: "Shiv Mandir",
-    description: "Shiv mandir that is very close to renusagar, just a walk away.",
+    description:
+      "Shiv mandir that is very close to renusagar, just a walk away.",
     link: "https://maps.app.goo.gl/rXyELxsmjnntAT6i9",
     image: "ShivMandir.png",
     icon: <FaHiking className="text-blue-700 text-3xl" />,
@@ -92,7 +96,7 @@ const Attractions = [
     image: "binaStadium.png",
     icon: <MdSportsSoccer className="text-purple-500 text-3xl" />,
   },
-  
+
   {
     name: "Chilka Jheel",
     description: "Lake in the near by town.",

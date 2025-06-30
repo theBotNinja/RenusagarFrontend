@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { HashLink } from "react-router-hash-link";
 
 export default function Card(props) {
   const [isHover, setHover] = useState(false);
   return (
+    <HashLink smooth to={props.link}>
     <motion.div
       onMouseEnter={() => {
         setHover(true);
@@ -36,5 +38,6 @@ export default function Card(props) {
         {props.description}
       </motion.p>
     </motion.div>
+        </HashLink>
   );
 }

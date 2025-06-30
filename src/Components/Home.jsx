@@ -8,6 +8,7 @@ import ImageStrip from "./Home/ImageStrip";
 import IndustrySection from "./Home/IndustrySection";
 import SchoolSection from "./Home/SchoolSection";
 import Tourism from "./Home/Tourism";
+import TransportSection from "./Home/TransportSection";
 export default function Home({touristAttractions}) {
   const [isDark, changetheme] = useContext(Theme);
   return (
@@ -31,6 +32,7 @@ export default function Home({touristAttractions}) {
         <FacilitiesSection></FacilitiesSection>
         <SchoolSection></SchoolSection>
         <Tourism touristAttractions={touristAttractions}></Tourism>
+        <TransportSection></TransportSection>
         <p className={`${isDark?"text-neutral-600":"text-neutral-400"} text-center p-4 `}>~ more section coming soon ~</p>
         <Footer></Footer>
       </div>
