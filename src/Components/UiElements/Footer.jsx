@@ -4,6 +4,7 @@ import { Theme } from "../../Context/Theme";
 import { useContext } from "react";
 import { Link } from "react-router";
 import { HashLink } from "react-router-hash-link";
+import logo from "../../assets/hindalco_logo.png";
 
 export default function Footer() {
   const [isDark, changetheme] = useContext(Theme);
@@ -16,7 +17,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand Section */}
         <div>
-          <img src="hindalco_logo.png" className="w-35" alt="Logo" />
+          <div style={{backgroundImage:`url(${logo})`}} className="w-40 h-35 bg-contain bg-no-repeat bg-center" alt="Logo" ></div>
           <h2 className="text-2xl font-bold">Hindalco Renusagar</h2>
         </div>
 

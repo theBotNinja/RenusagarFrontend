@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { Routes, Route } from "react-router";
+import { Routes, Route, Outlet } from "react-router";
 import Home from "./Components/Home";
 import { Theme } from "./Context/Theme";
 import RenusagarPowerPlant from "./Components/RenusagarPowerPlant";
@@ -20,12 +20,12 @@ function App() {
     }
     return false;
   });
-  const {pathname} = useLocation()
-   useEffect(()=>{
-    window.scrollTo(0,0)
-   },[pathname])
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   const [touristAttractions, changetouristAttractions] = useState(Attractions);
-  const [departments,changedepartment] = useState(departmentsData);
+  const [departments, changedepartment] = useState(departmentsData);
   const changetheme = () => {
     if (isDark == false) {
       setDark(true);
@@ -40,8 +40,14 @@ function App() {
           path="/"
           element={<Home touristAttractions={touristAttractions} />}
         />
-        <Route path="/PowerPlant" element={<RenusagarPowerPlant depart = {departments} />} />
-        <Route path="/PowerPlant/:deptname" element={<Department depart={departments} />} />
+        <Route
+          path="/PowerPlant"
+          element={<RenusagarPowerPlant depart={departments} />}
+        />
+        <Route
+          path="/PowerPlant/:deptname"
+          element={<Department depart={departments} />}
+        />
         <Route
           path="/explore"
           element={<Explore touristAttractions={touristAttractions} />}
@@ -53,184 +59,188 @@ function App() {
   );
 }
 
-
 const departmentsData = {
-  Accounts:{
-    link:"Accounts",
+  Accounts: {
+    link: "Accounts",
     name: "Accounts",
-    hod:"Navindra Pathak",
-    desc:"Finance & Accounts"
+    hod: "Navindra Pathak",
+    desc: "Finance & Accounts",
   },
-  APM:{
-    link:"APM",
+  APM: {
+    link: "APM",
     name: "APM",
-    hod:"Sandip Yewale",
-    desc:"Ash Plant Maintenance"
+    hod: "Sandip Yewale",
+    desc: "Ash Plant Maintenance",
   },
-  ARW:{
-    link:"ARW",
+  ARW: {
+    link: "ARW",
     name: "ARW",
-    hod:"A. Sudhakar",
-    desc:"Ariel Ropeway"
+    hod: "A. Sudhakar",
+    desc: "Ariel Ropeway",
   },
-  Autoshop:{
-    link:"Autoshop",
+  Autoshop: {
+    link: "Autoshop",
     name: "Autoshop",
-    hod:"Manish Singh",
-    desc:"Autoshop maintenance"
+    hod: "Manish Singh",
+    desc: "Autoshop maintenance",
   },
-  BLR_Mnt:{
-    link:"BLR_Mnt",
+  BLR_Mnt: {
+    link: "BLR_Mnt",
     name: "BLR Maintenance",
-    hod:"Sanjay Srimali",
-    desc:"Boiler Maintenance"
+    hod: "Sanjay Srimali",
+    desc: "Boiler Maintenance",
   },
-  Canteen:{
-    link:"Canteen",
+  Canteen: {
+    link: "Canteen",
     name: "Canteen",
-    hod:"Ashok Kumar Dwivedi",
-    desc:"Renusagar Canteen"
+    hod: "Ashok Kumar Dwivedi",
+    desc: "Renusagar Canteen",
   },
-  ChemiLab:{
-    link:"ChemiLab",
+  ChemiLab: {
+    link: "ChemiLab",
     name: "Chemical Lab",
-    hod:"Paltu Chatopadhyay Shivdani Yadav",
-    desc:"Laboratory"
+    hod: "Paltu Chatopadhyay Shivdani Yadav",
+    desc: "Laboratory",
   },
-  CHP_O:{
-    link:"CHP_O",
+  CHP_O: {
+    link: "CHP_O",
     name: "CHP-O",
-    hod:"Ashutosh Singh",
-    desc:"Coal Handling Plant -Operations"
+    hod: "Ashutosh Singh",
+    desc: "Coal Handling Plant -Operations",
   },
-  Civil:{
-    link:"Civil",
+  Civil: {
+    link: "Civil",
     name: "Civil",
-    hod:"Soumya Mishra",
-    desc:"Civil Maintenance"
+    hod: "Soumya Mishra",
+    desc: "Civil Maintenance",
   },
-  CMM:{
-    link:"CMM",
+  CMM: {
+    link: "CMM",
     name: "CMM",
-    hod:"Sandip Yewale",
-    desc:"Coal Mill Maintenance"
+    hod: "Sandip Yewale",
+    desc: "Coal Mill Maintenance",
   },
-  Coal:{
-    link:"Coal",
+  Coal: {
+    link: "Coal",
     name: "Coal Coordination",
-    hod:"Bibhu Patra",
-    desc:"Coal Sourcing Management Group"
+    hod: "Bibhu Patra",
+    desc: "Coal Sourcing Management Group",
   },
-  Design:{
-    link:"Design",
+  Design: {
+    link: "Design",
     name: "Design",
-    hod:"Samit Anand",
-    desc:"Design & Engineering"
+    hod: "Samit Anand",
+    desc: "Design & Engineering",
   },
-  Electrical:{
-    link:"Electrical",
+  Electrical: {
+    link: "Electrical",
     name: "Electrical",
-    hod:"Deepak Pandey",
-    desc:"Electrical Maintenance"
+    hod: "Deepak Pandey",
+    desc: "Electrical Maintenance",
   },
-  GMM:{
-    link:"GMM",
+  GMM: {
+    link: "GMM",
     name: "GMM",
-    hod:"Manu Arora",
-    desc:"General Mechanical Maintenance"
+    hod: "Manu Arora",
+    desc: "General Mechanical Maintenance",
   },
-  Guest_House:{
-    link:"Guest_House",
+  Guest_House: {
+    link: "Guest_House",
     name: "Guest House",
-    hod:"Ashok Kumar Dwivedi",
-    desc:"Guest House"
+    hod: "Ashok Kumar Dwivedi",
+    desc: "Guest House",
   },
-  HR:{
-    link:"HR",
+  HR: {
+    link: "HR",
     name: "HR",
-    hod:"Shailesh Vikram Singh",
-    desc:"Human Resource"
+    hod: "Shailesh Vikram Singh",
+    desc: "Human Resource",
   },
-  Instrumentation:{
-    link:"Instrumentation",
+  Instrumentation: {
+    link: "Instrumentation",
     name: "Instrumentation",
-    hod:"Deepak Pandey",
-    desc:"Instrument Maintenance"
+    hod: "Deepak Pandey",
+    desc: "Instrument Maintenance",
   },
-  IT:{
-    link:"IT",
+  IT: {
+    link: "IT",
     name: "IT Department",
-    hod:"Lalit Khurana",
-    desc:"Information Technology Department"
+    hod: "Lalit Khurana",
+    desc: "Information Technology Department",
   },
-  OHC:{
-    link:"OHC",
+  OHC: {
+    link: "OHC",
     name: "OHC",
-    hod:"Anitha Thykadavil",
-    desc:"Occupational Health Center"
+    hod: "Anitha Thykadavil",
+    desc: "Occupational Health Center",
   },
-  Purchase:{
-    link:"Purchase",
+  Purchase: {
+    link: "Purchase",
     name: "Purchase",
-    hod:"Nisha Kumari",
-    desc:"Purchase Department"
+    hod: "Nisha Kumari",
+    desc: "Purchase Department",
   },
-  Sanitation:{
-    link:"Sanitation",
+  Sanitation: {
+    link: "Sanitation",
     name: "Town Administration ",
-    hod:"Satnam Singh",
-    desc:"Town Administration , Sanitation & Horticulture"
+    hod: "Satnam Singh",
+    desc: "Town Administration , Sanitation & Horticulture",
   },
-  Security:{
-    link:"Security",
+  Security: {
+    link: "Security",
     name: "Security & FF",
-    hod:"Satnam Singh",
-    desc:"Security & Fire Fighting"
+    hod: "Satnam Singh",
+    desc: "Security & Fire Fighting",
   },
-  Store:{
-    link:"Store",
+  Store: {
+    link: "Store",
     name: "Store",
-    hod:"Om Prakash",
-    desc:"Central Stores"
+    hod: "Om Prakash",
+    desc: "Central Stores",
   },
-  Technical:{
-    link:"Technical",
+  Technical: {
+    link: "Technical",
     name: "Technical service",
-    hod:"Nikhil Jain",
-    desc:"Technical service"
+    hod: "Nikhil Jain",
+    desc: "Technical service",
   },
-  timeoff:{
-    link:"timeoff",
+  timeoff: {
+    link: "timeoff",
     name: "Time Off",
-    hod:"Mridul Bhardwaj",
-    desc:"Time Office"
+    hod: "Mridul Bhardwaj",
+    desc: "Time Office",
   },
-  Transport:{
-    link:"Transport",
+  Transport: {
+    link: "Transport",
     name: "Transport",
-    hod:"Mukesh Srivastava",
-    desc:"Light Vehicle Transport "
+    hod: "Mukesh Srivastava",
+    desc: "Light Vehicle Transport ",
   },
-  TTMDC:{
-    link:"TTMDC",
+  TTMDC: {
+    link: "TTMDC",
     name: "TTMDC",
-    hod:"Anil Sharma",
-    desc:"Technical Training & Management Development Center"
+    hod: "Anil Sharma",
+    desc: "Technical Training & Management Development Center",
   },
-  TUR_Mnt:{
-    link:"TUR_Mnt",
+  TUR_Mnt: {
+    link: "TUR_Mnt",
     name: "TUR Maintenance",
-    hod:"Manu Arora",
-    desc:"Turbine & Auxilaries Maintenance"
+    hod: "Manu Arora",
+    desc: "Turbine & Auxilaries Maintenance",
   },
-  Workshop:{
-    link:"Workshop",
+  Workshop: {
+    link: "Workshop",
     name: "Workshop",
-    hod:"Manish Singh",
-    desc:"Workshop maintenance"
+    hod: "Manish Singh",
+    desc: "Workshop maintenance",
+  },
+  CHP_M: {
+    link: "CHP_M",
+    name: "Coal Handling Plant -Maintenance",
+    hod: "Manish Singh",
+    desc: "Coal Handling Plant -Maintenance maintenance",
   },
 };
-
 
 const Attractions = [
   {
