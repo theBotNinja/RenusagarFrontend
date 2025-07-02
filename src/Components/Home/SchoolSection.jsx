@@ -7,7 +7,7 @@ import { Theme } from "../../Context/Theme";
 
 const schools = [
   {
-    name: "Aditya Birla Junior School",
+    name: "Renupower Primary School",
     description: "Hindi-medium primary school (Grades 1–5).",
     icon: "school.png",link:"https://adityabirlaschools.co.in/abjs-renusagar/"
   },

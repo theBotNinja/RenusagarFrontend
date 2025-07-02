@@ -5,7 +5,7 @@ import HeroSection from "./Home/HeroSection";
 import DepartmentSection from "./PowerPlant/DepartmentSection";
 import Certification from "./PowerPlant/Certification";
 
-export default function RenusagarPowerPlant() {
+export default function RenusagarPowerPlant({depart}) {
   return (
     <>
       <Navbar></Navbar>
@@ -23,7 +23,7 @@ export default function RenusagarPowerPlant() {
         btnLink={"/"}
         imageLink={"hindalco_logo.png"}
       ></HeroSection>
-      <DepartmentSection />
+      <DepartmentSection depart = {depart} />
       <Certification></Certification>
       <Footer></Footer>
     </>

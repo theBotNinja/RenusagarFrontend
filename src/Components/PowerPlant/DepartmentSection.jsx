@@ -26,155 +26,9 @@ import { GrVmMaintenance, GrHostMaintenance, GrTools } from "react-icons/gr";
 import { Theme } from "../../Context/Theme";
 import { Link } from "react-router";
 
-const departments = [
-  {
-    icon: <FaMoneyBillWave size={25} color="rgb(80,80,200)" />,
-    name: "Accounts",
-    link: "Accounts",
-  },
-  {
-    icon: <FaCogs size={25} color="rgb(80,80,200)" />,
-    name: "APM",
-    link: "APM",
-  },
-  {
-    icon: <FaCogs size={25} color="rgb(80,80,200)" />,
-    name: "ARW",
-    link: "ARW",
-  },
-  {
-    icon: <FaTools size={25} color="rgb(80,80,200)" />,
-    name: "Autoshop",
-    link: "Autoshop",
-  },
-  {
-    icon: <GrVmMaintenance size={25} color="rgb(80,80,200)" />,
-    name: "BLR Maintenance",
-    link: "BLR_Mnt",
-  },
-  {
-    icon: <IoFastFoodOutline size={25} color="rgb(80,80,200)" />,
-    name: "Canteen",
-    link: "Canteen",
-  },
-  {
-    icon: <SlChemistry size={25} color="rgb(80,80,200)" />,
-    name: "Chemical Lab",
-    link: "ChemiLab",
-  },
-  {
-    icon: <FaCogs size={25} color="rgb(80,80,200)" />,
-    name: "CHP-O",
-    link: "CHP-O",
-  },
-  {
-    icon: <BsBuildingsFill size={25} color="rgb(80,80,200)" />,
-    name: "Civil",
-    link: "Civil",
-  },
-  {
-    icon: <FaCogs size={25} color="rgb(80,80,200)" />,
-    name: "CMM",
-    link: "CMM",
-  },
-  {
-    icon: <GiCoalPile size={25} color="rgb(80,80,200)" />,
-    name: "Coal Coordination",
-    link: "Coal",
-  },
-  {
-    icon: <MdOutlineDesignServices size={25} color="rgb(80,80,200)" />,
-    name: "Design",
-    link: "Design",
-  },
-  {
-    icon: <MdElectricBolt size={25} color="rgb(80,80,200)" />,
-    name: "Electrical",
-    link: "Electrical",
-  },
-  {
-    icon: <FaCogs size={25} color="rgb(80,80,200)" />,
-    name: "GMM",
-    link: "GMM",
-  },
-  {
-    icon: <MdFoodBank size={25} color="rgb(80,80,200)" />,
-    name: "Guest House",
-    link: "Guest_House",
-  },
-  {
-    icon: <GiHumanPyramid size={25} color="rgb(80,80,200)" />,
-    name: "HR",
-    link: "HR",
-  },
-  {
-    icon: <CgSelectR size={25} color="rgb(80,80,200)" />,
-    name: "Instrumentation",
-    link: "Instrumentation",
-  },
-  {
-    icon: <FaComputer size={25} color="rgb(80,80,200)" />,
-    name: "IT Department",
-    link: "IT",
-  },
-  {
-    icon: <FaCogs size={25} color="rgb(80,80,200)" />,
-    name: "OHC",
-    link: "OHC",
-  },
-  {
-    icon: <CiShoppingTag size={25} color="rgb(80,80,200)" />,
-    name: "Purchase",
-    link: "Purchase",
-  },
-  {
-    icon: <MdOutlineSanitizer size={25} color="rgb(80,80,200)" />,
-    name: "Sanitation",
-    link: "Sanitation",
-  },
-  {
-    icon: <MdSecurity size={25} color="rgb(80,80,200)" />,
-    name: "Security & FF",
-    link: "Security",
-  },
-  {
-    icon: <FaStoreAlt size={25} color="rgb(80,80,200)" />,
-    name: "Store",
-    link: "Store",
-  },
-  {
-    icon: <FaCogs size={25} color="rgb(80,80,200)" />,
-    name: "Technical service",
-    link: "Technical",
-  },
-  {
-    icon: <IoIosTimer size={25} color="rgb(80,80,200)" />,
-    name: "Time Off",
-    link: "timeoff",
-  },
-  {
-    icon: <FaCarAlt size={25} color="rgb(80,80,200)" />,
-    name: "Transport",
-    link: "Transport",
-  },
-  {
-    icon: <GiTeacher size={25} color="rgb(80,80,200)" />,
-    name: "TTMDC",
-    link: "TTMDC",
-  },
-  {
-    icon: <GrHostMaintenance size={25} color="rgb(80,80,200)" />,
-    name: "TUR Maintenance",
-    link: "TUR_Mnt",
-  },
-  {
-    icon: <GrTools size={25} color="rgb(80,80,200)" />,
-    name: "Workshop",
-    link: "Workshop",
-  },
-];
 
-const DepartmentSection = () => {
+const DepartmentSection = ({depart}) => {
+  const listdepart = Object.values(depart)
   const [isDark, changetheme] = useContext(Theme);
   return (
     <section
@@ -202,7 +56,7 @@ const DepartmentSection = () => {
       </motion.div>
 
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {departments.map((dept, idx) => {
+        {listdepart.map((dept, idx) => {
           return (
             <motion.div
               key={idx}
