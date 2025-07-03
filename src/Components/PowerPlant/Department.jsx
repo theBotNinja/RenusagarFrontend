@@ -4,6 +4,7 @@ import Navbar from "../UiElements/Navbar";
 import Footer from "../UiElements/Footer";
 import { Theme } from "../../Context/Theme";
 import { CgProfile } from "react-icons/cg";
+import noimage from "../../assets/noimage.jpg"
 
 export default function Department({depart}) {
   const [isDark, changetheme] = useContext(Theme);
@@ -30,7 +31,7 @@ export default function Department({depart}) {
           {depart[deptname].name}
         </h1>
         <h6 className={`${isDark?"text-neutral-50  bg-neutral-950":" text-neutral-950 bg-blue-50"} flex items-center justify-center md:text-lg text-md border-2 rounded-3xl border-neutral-400 p-4`}>
-          <CgProfile size={30}></CgProfile>
+          <img src={noimage} className="w-15 rounded-2xl" alt="" />
           <span className="p-2">
            {depart[deptname].hod}
           </span>
@@ -39,8 +40,7 @@ export default function Department({depart}) {
           </span>
         </h6>
         <p className="text-justify ">
-          {depart[deptname].desc}
-          </p>
+          {depart[deptname].desc}   </p>
       </div>
           </div>
       <Footer></Footer>

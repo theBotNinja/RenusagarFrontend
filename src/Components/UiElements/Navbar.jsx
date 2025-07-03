@@ -45,7 +45,6 @@ export default function Navbar() {
             <MdOutlineDarkMode size={25} color="black"></MdOutlineDarkMode>
           )}
         </button>
-        <Link to="/404" className={`font-[Sacramento] text-2xl ${isDark?"bg-yellow-800": "bg-yellow-500"} p-1 rounded-lg `}>login</Link>
       </div>
     </nav>
   );
